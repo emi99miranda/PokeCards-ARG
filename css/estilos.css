@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+/*configuracion de variables*/
+:root{
+    --main-color: #000000;
+    --secondary-color: #af2b31;
+    --third-color: #ffffff;
+    --third-color-t: #ffffff;
+    --grosor-negrita :bold;
+}
+
+.container{
+    width: 350px;
+
+}
+label{
+    font-weight: bold;
+}
+
+.regist{
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-color);
+    color: var(--main-color);
+    background:url("../assets/bg.jpg");
+    background-size: 100%;
+}
+.registrarsePagina {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background:#fff;   
+    border-radius: 10px;
+}
+.registrarsePagina h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+.registrarsePagina form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+.grupo{
+    margin-bottom: 15px;
+}
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente el contenido */
+}
+
+.icono {
+    
+     img{
+        width: 20%;
+        height: 10%;
+        
+    }
+    margin-right: -370px;
+    
+    
+}
+
+.texto {
+    font-size: 4rem;
+    font-weight: --grosor-negrita;
+    margin-bottom: 20px;
+    color: #dde022; /* Color del texto */
+    text-shadow: 
+        -2px -2px 0 #0d22df,  
+         2px -2px 0 #0d22df,
+        -2px  2px 0 #0d22df,
+         2px  2px 0 #0d22df
+    /* Estilos para el texto, como color, tamaño de fuente, etc. */
+}
+
+::-webkit-scrollbar{
+    width: 15px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Estilo para el pulgar (thumb) de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff; /* Color del pulgar */
+    border-radius: 0px; /* Radio de borde del pulgar */
+    
+}
+
+/* Estilo para el fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background-color: #a5a2a275; /* Color del fondo de la barra */
+}
+
+/*estilos del body*/
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-color);
+    color: var(--main-color);
+   
+}
+/*generalidades*/
+h1{
+    font-size: 2.5rem;
+}
+h2{
+    font-size: 2rem;
+}
+h1,h2{
+    font-weight: --grosor-negrita;
+    margin-bottom: 20px;
+    color: #fff; /* Color del texto */
+    text-shadow: 
+        -2px -2px 0 #000000,  
+         2px -2px 0 #000000,
+        -2px  2px 0 #000000,
+         2px  2px 0 #000000;
+    
+}
+
+
+/*media query 992px*/
+@media screen and (max-width: 992px){
+    h1{
+        font-size: 2.4rem;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+}
+header,footer{
+    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+    padding: 20px;
+}
+/*estilos del header*/
+
+.header{
+    height: 15vh;
+    position:sticky;
+    top:0; 
+    z-index: 10; 
+    nav{
+        height: 100%;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        a{
+            text-decoration: none;
+            color: var(--third-color);
+            font-size:1.6rem;
+        }
+        ul{
+            list-style: none;
+            display:flex;
+            column-gap: 20px;
+            a{
+                font-size:1.4rem;
+            }
+           
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .header{
+        height: initial;
+        nav{
+            flex-direction: column;
+            row-gap:20px;
+            ul{
+                text-align: center;
+                flex-direction: column;
+                row-gap: 10px;
+            
+            }
+        }
+    }
+}
+/*main
+estilos seccion principal
+*/
+.sectionTitulos{
+    height: 85vh;
+    background:linear-gradient(to bottom, #000000a3, #000000a3),url("../assets/banner.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    .contenedorTitulos{
+        text-align: center;
+        /*efecto blur a un contenedor*/
+        backdrop-filter: blur(3px);
+        width: 60%;
+        margin:0 auto;
+        border-radius: 5px;
+        a{
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            color: #ffffff; /* Color del texto */
+            text-shadow: 
+                -2px -2px 0 #000000,  
+                 2px -2px 0 #000,
+                -2px  2px 0 #000,
+                 2px  2px 0 #000; 
+            font-size: 2rem;
+            border:2px solid var(--third-color);
+            border-radius: 5px;
+            padding:10px 20px;
+        }
+        
+    }
+}
+/*media query 992px*/
+@media screen and (max-width: 992px){
+    .sectionTitulos{
+        background: black;
+        height: 70vh;
+        .contenedorTitulos{
+            width: 90%;
+            backdrop-filter: initial;
+            a{
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+.peliculasTendencias{
+    width: 80%;
+    margin:0 auto;
+    text-align: center;
+    h2{
+        margin-top:50px;
+        margin-bottom:20px;
+    }
+    .galeriaTendencias{
+        display:flex;
+        justify-content: space-evenly;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+       
+        div{
+            width: 250px;
+            height: 350px;
+            box-shadow: 10px 10px 47px -6px rgba(255,255,255,0.42);
+            border-radius: 5px;
+            margin-top: 100px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+    }
+    button{
+       margin-bottom:20px;
+    }
+}
+@media screen and (max-width: 992px){
+    .peliculasTendencias{
+        width: 95%;
+        .galeriaTendencias{
+            div{
+                width: 300px;
+                height: 200px;
+            }
+        }
+    }
+    
+}
+
+/*estilos de section peliculas aclamadas*/
+.peliculasAclamadas{
+    width: 80%;
+    margin:0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+    h2{
+        margin-top:50px;
+        margin-bottom:20px;
+    }
+    .galeriaAclamadas{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: start;
+        column-gap: 90px;
+        div{
+            width: 220px;
+            height: 350px;
+            flex-shrink: 0;
+            box-shadow: 10px 10px 47px -45px rgba(8, 8, 8, 0.29);
+           
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;  
+    margin-top: 100px;        
+    nav{
+        ul{
+            
+            list-style: none;
+            display:flex;
+            justify-content: Center;
+            align-items: Center;
+            column-gap: 50px;
+           
+            
+            li{
+                a{
+                    text-decoration: none;
+                    color: var(--third-color);
+                    font-size: 1.4rem;
+                }
+            }
+          
+        }
+    }  
+}
+
+.margen  {
+    margin-bottom: 60px; /* Margen inferior entre el contenido y el pie de página */
+}
+
+hr{
+    border: 1px solid #ffffff;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+}

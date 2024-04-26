@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Video de YouTube con JavaScript</title>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="stylesheet" href="./css/estilos.css"> 
+    <script>
+        var player;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '400',
+                width: '600',
+                videoId: 'ndenXpxSA9A',
+                playerVars: {
+                    autoplay: 1 // 1 para activar el autoplay
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            // Puedes realizar acciones cuando el reproductor esté listo
+        }
+
+        function onPlayerStateChange(event) {
+            // Puedes realizar acciones cuando el estado del reproductor cambie
+        }
+    </script>
+      <a href="index.html" class="icono" >
+        <img src="./assets/iconohome .png" alt="Logo Pokecards" loading="lazy">
+        
+    </a>
+    
+</head>
+<hr>
+<body class="sectionTitulos">
+
+    <header   class="header">
+        <nav>
+            <ul>
+        <h1>PEDRO PEDRO PEDRO PEDRO PEDRO PEDRO PEDRO</h1>
+        <h2>PEDRO PEDRO PEDRO PEDRO PEDRO PEDRO PEDRO PE</h2>
+    </ul>
+    </nav>
+    </header>
+
+
+<div id="player" class="footer"></div>
+
+
+</body>
+</html>
