@@ -38,41 +38,62 @@
     </header>
 
     <div class="registrarsePagina">
-    <h1>Registrarse</h1>
-    <form method="post">
-        <div class="grupo"> 
-            <label for="nombre">Ingrese su nombre</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+        <section id="registro" class="section-registro">
+            <h1>Registro</h1>
+            <form id="registrationForm" action="#">
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                        <span id="nombreError" class="error"></span>
+                    </div>
+                    <div class="campo">
+                        <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+                        <span id="apellidoError" class="error"></span>
+                    </div>
+                    <div class="campo">
+                        <input type="email" name="email" id="email" placeholder="Email">
+                        <span id="emailError" class="error"></span>
+                    </div>
+                    <div class="campo">
+                        <input type="password" name="password" id="password" placeholder="Contraseña">
+                        <span id="passwordError" class="error"></span>
+                    </div>
+                    <div class="campo">
+                        <input type="date" name="nacimiento" id="nacimiento">
+                        <span id="fechaNacimientoError" class="error"></span>
+                    </div>
+                    <div>
+                        <select name="pais" id="pais" class="form-select form-select-lg mb-3"
+                            aria-label="Large select example">
+                            <option value="AR">Argentina</option>
+                            <option value="PE">Perú</option>
+                            <option value="MX">Mexico</option>
+                            <option value="CL">Chile</option>
+                            <option value="CL">Brasil</option>
+                            <option value="CL">Ecuador</option>
+                            <option value="CL">Venezuela</option>
+                            <option value="CL">Uruguay</option>
+                            <option value="CL">Paraguay</option>
+                            <option value="CL">Colombia</option>
+                        </select>
+                        <span id="paisError" class="error"></span>
+                    </div>
+                    <div >
+                        <input type="checkbox" name="termino" id="terminos">
+                        <label class="body" for="terminos">Aceptar terminos y condiciones</label>
+                        <div id="terminosError" class="error"></div>
+                    </div>
+                    <input type="submit" value="Registrarse">
+                    <a class="form-iniciosesion-registrarse" href="../pages/login.html">Tengo Cuenta</a>
+                </form>
+            </section>
         </div>
-        <div class="grupo"> 
-            <label for="apellido">Apellido</label>
-            <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
-        </div>
-        <div class="grupo"> 
-            <label for="nacimiento">Fecha de nacimiento</label>
-            <input type="date" name="nacimiento" id="nacimiento" requiered>
-        </div>
-        <div class="grupo"> 
-            <label for="mail">Email</label>
-            <input type="text" name="mail" id="mail" placeholder="Email" requiered>
-        </div>
-        <div class="grupo"> 
-            <label for="contraseña">Contraseña</label>
-            <input type="contraseña" name="contraseña" id="contraseña" placeholder="Contraseña"requiered>
-        </div>
-        <div class="iniciarsesion">
-        Tengo cuenta    <a href="./login.html">Iniciar Sesion</a>
-        </div>
+
     </form>
 </div>
     
 
-
+<script src="../js/register.js"></script>
 </body>
-<main>
 
- 
-   
-    
-</main>
 </html>

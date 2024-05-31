@@ -30,23 +30,44 @@ label{
     background-size: 100%;
 }
 .registrarsePagina {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background:#fff;   
-    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
 }
-.registrarsePagina h1{
-    text-align: center;
-    padding: 0 0 20px 0;
-    border-bottom: 1px solid silver;
-}
-
-.registrarsePagina form{
-    padding: 0 40px;
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+input[type="email"],
+input[type="date"],
+.form-select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     box-sizing: border-box;
+    font-size: 100%;
+  }
+  input[type="submit"] {
+    background-color: #b65757;
+    color: white;
+    cursor: pointer;
+  }
+  .form-iniciosesion-registrarse {
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    display: block;
+  }
+
+form .usuario{
+    position: relative;
+    border-bottom: 2px solid white;
+    margin: 30px 0;
 }
 .grupo{
     margin-bottom: 15px;
