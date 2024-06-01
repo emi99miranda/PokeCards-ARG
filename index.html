@@ -11,6 +11,8 @@
     <script src="https://kit.fontawesome.com/5115e98eab.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./css/estilos.css">  <!--estilo css-->
 </head>
@@ -42,7 +44,21 @@
         
     </header>
 
-    <main class="margen">
+    <main >
+
+        <nav>
+            <div class="container-fluid navbar navbar-expand-lg navbar-light   p-0 my-2 justify-content-center bg-danger">
+              <div class="collapse navbar-collapse pb-2 justify-content-around" id="navbarNavAltMarkup2">
+                  <div class="navbar-nav row align-items-center text-center w-100">
+                      <p class="nav-item col m-0 py-1 "><span>Ciudad:</span> <span id="city"></span></p>
+                      <p class="nav-item col m-0 py-1"><span>Temperatura:</span> <span id="temperature"></span> °C</p>
+                      <p class="nav-item col m-0 py-1"><span>Clima:</span> <span id="weather"></span> <img id="weatherIcon" src="" alt=""></p>
+                      <p class="nav-item col m-0 py-1"><span>Humedad:</span> <span id="humidity"></span>%</p>
+                      <p class="nav-item col m-0 py-1"><span>Velocidad del Viento:</span> <span id="windSpeed"></span> m/s</p>
+                  </div>
+              </div>
+            </div>
+          </nav>
 
         <section class="sectionTitulos" data-aos="fade-up">
             <div class="contenedorTitulos">
@@ -149,7 +165,7 @@
     <script>
         AOS.init();
       </script>
-   
+    <script src="./js/apiClima.js"></script>
 </body>
   
 </html>
